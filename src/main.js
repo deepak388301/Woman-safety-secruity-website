@@ -11,7 +11,6 @@ if (SUPABASE_URL && SUPABASE_KEY) {
 }
 
 const authModal = document.getElementById('authModal');
-const authBtn = document.getElementById('authBtn');
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 const closeBtn = document.querySelector('.close');
@@ -61,7 +60,6 @@ switchToLogin.addEventListener('click', (e) => {
   switchForm('login');
 });
 
-authBtn.addEventListener('click', toggleModal);
 closeBtn.addEventListener('click', toggleModal);
 
 authModal.addEventListener('click', (e) => {
@@ -159,14 +157,8 @@ async function updateAuthUI() {
 
     if (session) {
       currentUser = session.user;
-      authBtn.textContent = 'Sign Out';
-      authBtn.removeEventListener('click', toggleModal);
-      authBtn.addEventListener('click', handleSignOut);
     } else {
       currentUser = null;
-      authBtn.textContent = 'Sign In';
-      authBtn.removeEventListener('click', handleSignOut);
-      authBtn.addEventListener('click', toggleModal);
     }
   } catch (err) {
     console.error('Error checking session:', err);
