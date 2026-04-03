@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeHer - Women's Safety Platform</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">SafeHer</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+        <li><a href="#emergency" class="nav-link">Emergency</a></li>
+        <li><button id="authBtn" class="nav-button">Sign In</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="authModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="authForms">
+        <div id="loginForm" class="auth-form">
+          <h2>Sign In</h2>
+          <input type="email" id="loginEmail" placeholder="Email" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <button id="loginBtn" class="btn-primary">Sign In</button>
+          <p class="auth-toggle">Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+        </div>
+        <div id="signupForm" class="auth-form hidden">
+          <h2>Create Account</h2>
+          <input type="email" id="signupEmail" placeholder="Email" required>
+          <input type="password" id="signupPassword" placeholder="Password (min 6 characters)" required>
+          <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+          <button id="signupBtn" class="btn-primary">Sign Up</button>
+          <p class="auth-toggle">Already have an account? <a href="#" id="switchToLogin">Sign In</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1>Your Safety is Our Priority</h1>
+      <p>A comprehensive platform designed to empower and protect women with real-time safety tools and resources</p>
+      <div class="hero-buttons">
+        <button class="btn-primary btn-lg" id="emergencyBtn">Emergency Alert</button>
+        <button class="btn-secondary btn-lg" id="learnMore">Learn More</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Our Safety Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Real-time Location Sharing</h3>
+          <p>Share your location with trusted contacts instantly during emergencies</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🆘</div>
+          <h3>One-Touch Emergency Alert</h3>
+          <p>Alert emergency contacts and local authorities with a single tap</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3>Trusted Contacts</h3>
+          <p>Maintain a list of trusted contacts who can help in emergencies</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Safety Resources</h3>
+          <p>Access comprehensive guides, tips, and educational materials</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Community Support</h3>
+          <p>Connect with other women and share experiences safely</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Safety Alerts</h3>
+          <p>Receive notifications about unsafe areas and incidents</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="resources">
+    <div class="container">
+      <h2>Safety Resources & Hotlines</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h3>National Hotlines</h3>
+          <ul class="hotline-list">
+            <li><strong>Emergency:</strong> 911</li>
+            <li><strong>Domestic Violence:</strong> 1-800-799-7233</li>
+            <li><strong>Sexual Assault:</strong> 1-800-656-4673</li>
+            <li><strong>Crisis Text Line:</strong> Text HOME to 741741</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h3>Safety Tips</h3>
+          <ul class="tips-list">
+            <li>Trust your instincts</li>
+            <li>Stay aware of surroundings</li>
+            <li>Keep emergency contacts accessible</li>
+            <li>Share your location with trusted friends</li>
+            <li>Learn basic self-defense</li>
+            <li>Use public transportation safely</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h3>Quick Actions</h3>
+          <div class="quick-actions">
+            <button class="action-btn" id="shareLocation">Share My Location</button>
+            <button class="action-btn" id="contactEmergency">Contact Emergency</button>
+            <button class="action-btn" id="viewIncidents">Nearby Incidents</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="emergency" class="emergency-section">
+    <div class="container">
+      <h2>Emergency Protocol</h2>
+      <div class="emergency-content">
+        <div class="emergency-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>Assess the Situation</h4>
+            <p>Ensure your safety first. Find a safe location if possible.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>Activate Alert</h4>
+            <p>Use our emergency button to notify contacts and authorities.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>Share Information</h4>
+            <p>Your location and incident details are automatically shared.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>Get Support</h4>
+            <p>Remain in contact with responders and trusted contacts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 SafeHer - Women's Safety Platform. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
